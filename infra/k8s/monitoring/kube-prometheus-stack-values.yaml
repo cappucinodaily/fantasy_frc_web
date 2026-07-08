@@ -21,7 +21,7 @@ prometheus:
     storageSpec:
       volumeClaimTemplate:
         spec:
-          storageClassName: local-path
+          storageClassName: longhorn
           accessModes: ["ReadWriteOnce"]
           resources:
             requests:
@@ -40,7 +40,7 @@ grafana:
   persistence:
     enabled: true
     type: pvc
-    storageClassName: local-path
+    storageClassName: longhorn
     accessModes: ["ReadWriteOnce"]
     size: 5Gi
   resources:
@@ -92,4 +92,3 @@ grafana:
     ingressClassName: nginx
     hosts:
       - ${GRAFANA_DOMAIN}
-    path: /

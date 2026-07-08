@@ -25,16 +25,16 @@ server:
 
       disable_mlock = true
 
-  # Persist Vault data using local-path storage class
+  # Persist Vault data using Longhorn storage class
   dataStorage:
     enabled: true
     size: 10Gi
-    storageClass: local-path
+    storageClass: longhorn
 
   auditStorage:
     enabled: true
     size: 5Gi
-    storageClass: local-path
+    storageClass: longhorn
 
   resources:
     requests:
